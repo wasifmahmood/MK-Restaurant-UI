@@ -1,0 +1,88 @@
+.main-menu {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Additional styles for your navbar */
+}
+
+.page {
+  height: 100vh;
+}
+
+.product-page {
+  display: flex;
+  /* Use flexbox layout */
+  height: 90vh;
+  /* Set height to 100% of viewport height */
+  background-color: #f9f9f9;
+  overflow-y: hidden;
+  scroll-margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+
+.item-section {
+  flex: 7;
+  flex-wrap: wrap;
+  /* Take up 70% of width */
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  /* Enable vertical scrolling if content overflows */
+}
+
+.category-heading {
+font-size: 25px;
+line-height: 30px;
+position: relative;
+/* background: aquamarine;
+width: -webkit-fill-available; */
+padding-left: 10px;
+border-color: #CA2129;
+border-left-style: solid;
+margin: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cart-section {
+  flex: 3;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  /* Take up 30% of width */
+  /* Additional styles for section 2 */
+}
+
+/* CSS to hide scrollbar and customize appearance */
+.scrollable-div {
+  overflow-y: scroll;
+  /* Apply scrollbar to this element */
+}
+
+/* Customize scrollbar appearance (optional) */
+.scrollable-div::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+  background-color: #f0f0f0;
+  /* Background color of the scrollbar */
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  /* Color of the scrollbar thumb */
+}
+
+.product-category-section {
+    display: flex;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+}

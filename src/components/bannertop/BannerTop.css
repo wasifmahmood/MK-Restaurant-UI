@@ -1,0 +1,45 @@
+.banner-top-section {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: transparent;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.outlet-information {
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 100px;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+.login-menu-container {
+    width: 10%;
+    text-align: center;
+    gap: 10px;
+}
+
+.login {
+    color: white;
+    font-size:large;
+}
+
+.menu-burger {
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width:auto;
+}

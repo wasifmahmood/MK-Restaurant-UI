@@ -1,0 +1,10 @@
+.address-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url(../../assets/svgs/address-bar-bg.svg);
+}
+
+.bg-c-light {
+    background-color: #CA2129;
+    color: aliceblue;
+}

@@ -1,0 +1,27 @@
+<div className='Addon'>
+                      <div className='option-name' >
+                        <div className='option-name-title' >
+                          Add on
+                        </div>
+                      </div>
+                      <div className='option-required f3'>
+                        <div className='card-data' >
+                          {AddOns.map((category) => {
+                            return (
+                              <div key={category.category}>
+                                <h3>{category.category}</h3>
+                                <div className='card-container'>
+                                  {category.AddOn.map((item) => (
+                                    <ModalCard
+                                      modalimg={item.img}
+                                      modalname={item.name}
+                                      modalprice={item.price}
+                                    />
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
