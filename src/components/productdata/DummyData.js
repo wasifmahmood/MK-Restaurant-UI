@@ -1,4 +1,5 @@
 import product from "./../../assets/images/product.jpg"
+// import logo from "./../../assets/images/logo.png"
 
 const Category = [
   {
@@ -438,8 +439,8 @@ const products = [
     rId: "d85tBzLaBiSFqXe6d6fLcTsMC4q1",
     title: "Tangy spicy fish",
   },
+  
 ];
-
 const AddOns = [
   {
     id: 1,
@@ -457,17 +458,5 @@ const AddOns = [
 
     ],
   },
-  {
-    id: 2,
-    AddOn: [
-      { name: 'Pickled Jalapeno', img: product, price: 'RS 50' },
-      { name: 'Pickled Cucumbers', img: product, price: 'RS 50' },
-      { name: 'Jalapeno Salsa', img: product, price: 'RS 80' },
-
-
-
-    ],
-  },
-
 ]
 export { Category, Deals, products, AddOns };

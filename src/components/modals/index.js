@@ -96,14 +96,14 @@ export const ProductDetailsModal = ({
                         </div>
                       </div>
 
-                      <div className='option-required f3'>
+                      <div className='option-required '>
                         <div className='card-data' >
                           {AddOns.map((category) => {
                             return (
                               <div key={category.category}>
                                 <h3>{category.category}</h3>
 
-                                <div className='card-container '>
+                                <div className='card-container ' >
                                   {category.AddOn.map((item) => (
                                     <ModalCard
                                       modalimg={item.img}
@@ -113,7 +113,6 @@ export const ProductDetailsModal = ({
                                   ))}
                                 </div>
                               </div>
-
                             );
                           })}
                         </div>

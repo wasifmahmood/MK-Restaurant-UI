@@ -11,15 +11,6 @@
   display: none;
 }
 
-
-.modalwrap {
-  display: flex;
-  background-color: #f9f9f9;
-  /* flex-direction: row; */
-
-
-}
-
 .modalwrap {
   display: flex;
   flex-direction: row;
@@ -55,10 +46,7 @@
   padding: 20px;
 }
 
-.text {
-  color: #BBB9C7;
-  font-size: 16px;
-}
+
 
 .itemoption {
   margin: 0;
@@ -100,6 +88,8 @@
 .option-name-title {
   display: flex;
   flex-direction: column;
+  
+  
 }
 
 .option-required {
@@ -109,17 +99,28 @@
   line-height: 18px;
   color: #6e6e6e;
   display: flex;
+  width: 100%;
+  overflow-x: auto;
+  
 }
-
+/* .card-data{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+} */
 .card-container{
   display: flex;
   flex-wrap: nowrap;
   column-gap: 20px;
-  padding: 10px;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto; /* add horizontal scroll */
+  padding: 5px;
+  
+
+  
  
 } 
+/* .scrollable-div{
+  overflow-x: scroll;
+} */
 
 .option-value {
   margin: 0px 0px 5px;

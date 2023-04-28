@@ -10,7 +10,7 @@ const ProductCard = ({ image, title, prices, onClick }) => {
           <span >{title}</span>
         </div>
         <div className="product-prices">
-          <span className="product-price">{prices}</span>
+          <span className="product-price">RS {prices}</span>
           {/* {prices.discountPrice && (
                         <span className="product-discount-price">{prices.discountPrice}</span>
                     )} */}
