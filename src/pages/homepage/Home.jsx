@@ -86,7 +86,7 @@ const Home = () => {
           </MainMenu>
         </div>
         <div className="product-page">
-          <div className="item-section scrollable-div">
+          <div className="item-section ">
             <div
               className="card"
               style={{
