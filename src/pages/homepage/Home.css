@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  height: 20vh;
   /* Additional styles for your navbar */
 }
 
@@ -12,7 +13,7 @@
 .product-page {
   display: flex;
   /* Use flexbox layout */
-  height: 90vh;
+  height: 80vh;
   /* Set height to 100% of viewport height */
   background-color: #f9f9f9;
   overflow-y: hidden;
@@ -27,26 +28,21 @@
   flex-wrap: wrap;
   /* Take up 70% of width */
   overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   background-color: #f9f9f9;
+  /* overflow: hidden; */
   /* Enable vertical scrolling if content overflows */
 }
 
-.item-section ::-webkit-scrollbar {
-  display: none;
-}
-
 .category-heading {
-  font-size: 25px;
-  line-height: 30px;
-  position: relative;
-  /* background: aquamarine;
+font-size: 25px;
+line-height: 30px;
+position: relative;
+/* background: aquamarine;
 width: -webkit-fill-available; */
-  padding-left: 10px;
-  border-color: #CA2129;
-  border-left-style: solid;
-  margin: 10px;
+padding-left: 10px;
+border-color: #CA2129;
+border-left-style: solid;
+margin: 10px;
 }
 
 .card {
@@ -67,6 +63,7 @@ width: -webkit-fill-available; */
 /* CSS to hide scrollbar and customize appearance */
 .scrollable-div {
   overflow-y: scroll;
+  /* overflow: hidden; */
   /* Apply scrollbar to this element */
 }
 
@@ -84,11 +81,11 @@ width: -webkit-fill-available; */
 }
 
 .product-category-section {
-  display: flex;
-  width: 100%;
-  /* margin-bottom: 20px; */
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: start;
+    display: flex;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
 }

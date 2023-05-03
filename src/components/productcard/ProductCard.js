@@ -6,14 +6,9 @@ const ProductCard = ({ image, title, prices, onClick }) => {
     <div className="product-card shadow" onClick={onClick}>
       <img src={image} alt={title} className="product-image" />
       <div className="product-details">
-        <div className="product-title" style={{ height: 50 }}>
-          <span >{title}</span>
-        </div>
+        <span className="product-title">{title}</span>
         <div className="product-prices">
-          <span className="product-price">RS {prices}</span>
-          {/* {prices.discountPrice && (
-                        <span className="product-discount-price">{prices.discountPrice}</span>
-                    )} */}
+          <span className="product-price">{prices}</span>
         </div>
       </div>
     </div>

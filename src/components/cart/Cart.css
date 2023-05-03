@@ -1,74 +1,50 @@
-/* .cart {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    margin: 10px;
+.item-detail-section{
+    min-height: 150px;
+}
+
+.item-detail{
+    display: flex;
+    flex-direction: row;
+}
+
+.item-detail .item-quantity {
+    flex: 1;
+    width: 20px;
+    color: #CA2129;
+}
+
+.item-detail .item-data {
+    flex: 9;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.remove {
+    width: 25px;
     text-align: center;
-    height:fit-content;
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px;
-
+    color: #CA2129;
 }
 
-.heading {
-    color: #2e3434;
+.add {
+    width: 25px;
     text-align: center;
-    padding: 25px 20px;
-    font-size: 6px;
-    font-family: Larsseit, sans-serif;
-    display: block;
-
+    color: #CA2129;
 }
 
-.button {
-    color: #FFFFFF;
-    font: 16px;
-    background-color: #EB146B;
-    font-family: Larsseit, sans-serif;
-    border-radius: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-    display: block;
-} */
-
-
-@media (min-width: 1025px) {
-    .h-custom {
-        height: 100vh !important;
-    }
+.checkout-button{
+background-color: #CA2129;
+border: none;
+border-radius: 5px;
+height:35px;
+color: white;
 }
 
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
-}
-
-.card-registration .select-arrow {
-    top: 13px;
-}
-
-.bg-grey {
-    background-color: #eae8e8;
-}
-
-@media (min-width: 992px) {
-    .card-registration-2 .bg-grey {
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-}
-
-@media (max-width: 991px) {
-    .card-registration-2 .bg-grey {
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-}
-
-.p-2 {
-    border-radius: 5px;
+.checkout-button:hover {
+    color: black;
     border-style: solid;
-    color: darkgrey;
+    border-color: #CA2129;
+    border-width: 2px;
+    background-color: white;
 }

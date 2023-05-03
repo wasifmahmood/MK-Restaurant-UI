@@ -10,9 +10,10 @@ import {
 } from "../../components/mainmenu/MainMenu";
 import ProductCard from "../../components/productcard/ProductCard";
 import { Category, products } from "../../components/productdata/DummyData";
-import { appColor, COLORS } from "../../constants/colors";
+import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
 import { ProductDetailsModal } from "../../components/modals";
+
 
 const Home = () => {
   const [searchBarVisible, setSearchBarVisible] = useState(false);
@@ -40,6 +41,7 @@ const Home = () => {
     setActiveCategory(categoryId); // update active category state
   };
 
+ 
   return (
     <React.Fragment>
       <div className="banner-top">
@@ -67,10 +69,11 @@ const Home = () => {
                     <CategoryButton
                       key={index}
                       name={item.name}
+                      img={item.image}
                       id={item.id}
                       onClick={() => handleCategoryClick(item.id)}
                       active={activeCategory === item.id}
-                    // onClick={handleCategoryClick(item.id)} active={activeCategory === item.id}
+                      // onClick={handleCategoryClick(item.id)} active={activeCategory === item.id}
                     />
                   );
                 })}
@@ -86,7 +89,7 @@ const Home = () => {
           </MainMenu>
         </div>
         <div className="product-page">
-          <div className="item-section ">
+          <div className="item-section scrollable-div">
             <div
               className="card"
               style={{
@@ -100,7 +103,7 @@ const Home = () => {
                 {Category.map((obj, index) => {
                   return (
                     <>
-                      <div className="category-heading">
+                      <div className="category-heading" >
                         <h4 key={index} style={{ flex: 1 }}>
                           {obj.name}
                         </h4>
@@ -140,8 +143,6 @@ const Home = () => {
         productname={productdetail.title}
         productprice={productdetail.Price}
         productdescription={productdetail.description}
-        onDecrementClick={() => console.log("onDecrementClick")}
-        onIncrementClick={() => console.log("onIncrementClick")}
       />
     </React.Fragment>
   );

@@ -4,19 +4,29 @@
   padding: 20px;
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
+
+  
 }
+.category-list{
+  overflow-x: scroll;
+ 
+  display: flex;
+ flex-direction: row;
+  height: 100%;
+
+}
+
 
 .menu .search-container {
   display: flex;
   align-items: center;
   position: relative;
   z-index: 3;
+  
 }
 
 .search-bar-container .clear-button {
-  /* position: absolute; */
-  margin-right: 2.5rem;
+  margin: 0.5rem;
   background: none;
   border: none;
   outline: none;
@@ -27,16 +37,17 @@
   font-size: 24px;
   color: #333;
   cursor: pointer;
+ 
+  
 }
 
-.menubar .search-bar-container {
+.search-bar-container {
   position: absolute;
-  /* width: 100%; */
   top: 0;
   right: 0;
-  left: 2.5rem;
+  left: 0.5rem;
+  border: none;
   background-color: #fff;
-  /* padding: 10px; */
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -44,12 +55,10 @@
 
 .menu .search-bar-container input {
   width: 100%;
-  /* max-width: 500px; */
   padding: 8px;
   border: none;
-  /* border-radius: 20px; */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   font-size: 16px;
+  
 }
 
 .search-bar-container .form-control:focus {
@@ -62,3 +71,42 @@
     overflow-x: auto;
   }
 }
+
+
+/* /navbar / */
+
+.nav-card{
+  padding: 5px;
+  /* background-color: black; */
+  flex-direction: row;
+  display: flex;
+  border-radius: 5px;
+  margin-top: 5px;
+  justify-content: space-between;
+  width: fit-content;
+  
+  
+}
+.nav-name{
+  flex-direction: row;
+  float: left;
+  flex: 1;
+  color: red;
+  text-align: end;
+  padding-right: 5px;
+  white-space: nowrap;
+
+  
+}
+
+.nav-img{
+  width: 40px;
+  height: 40px;
+  flex-direction: row;
+  float: right;
+  background-color: beige;
+  border-radius: 5px;
+
+
+}
+

@@ -1,5 +1,4 @@
-import product from "./../../assets/images/product.jpg"
-// import logo from "./../../assets/images/logo.png"
+import product from "./../../assets/images/product.jpg";
 
 const Category = [
   {
@@ -439,24 +438,30 @@ const products = [
     rId: "d85tBzLaBiSFqXe6d6fLcTsMC4q1",
     title: "Tangy spicy fish",
   },
-  
 ];
 const AddOns = [
   {
     id: 1,
     AddOn: [
-      { name: 'Chicken Bologna', img: product, price: 'RS 80' },
-      { name: 'Crispy Onion Rings', img: product, price: 'RS 60' },
-      { name: 'Turkey bacon', img: product, price: 'RS 250' },
-      { name: 'Fried Egg', img: product, price: 'RS 50' },
-      { name: 'Scrambled Egg', img: product, price: 'RS 50' },
-      { name: 'Caramelized Onions', img: product, price: 'RS 50' },
-      { name: 'Sauteed Mushrooms', img: product, price: 'RS 100' },
-      { name: 'Pickled Jalapeno', img: product, price: 'RS 50' },
-      { name: 'Pickled Cucumbers', img: product, price: 'RS 50' },
-      { name: 'Jalapeno Salsa', img: product, price: 'RS 80' },
-
+      { name: "Chicken Bologna", img: product, price: "RS 80" },
+      { name: "Crispy Onion Rings", img: product, price: "RS 60" },
+      { name: "Turkey bacon", img: product, price: "RS 250" },
+      { name: "Fried Egg", img: product, price: "RS 50" },
+      { name: "Scrambled Egg", img: product, price: "RS 50" },
+      { name: "Caramelized Onions", img: product, price: "RS 50" },
+      { name: "Sauteed Mushrooms", img: product, price: "RS 100" },
+      { name: "Pickled Jalapeno", img: product, price: "RS 50" },
+      { name: "Pickled Cucumbers", img: product, price: "RS 50" },
+      { name: "Jalapeno Salsa", img: product, price: "RS 80" },
     ],
   },
-]
+  {
+    id: 2,
+    AddOn: [
+      { name: "Pickled Jalapeno", img: product, price: "RS 50" },
+      { name: "Pickled Cucumbers", img: product, price: "RS 50" },
+      { name: "Jalapeno Salsa", img: product, price: "RS 80" },
+    ],
+  },
+];
 export { Category, Deals, products, AddOns };

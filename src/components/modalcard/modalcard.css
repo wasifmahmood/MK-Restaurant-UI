@@ -1,48 +1,41 @@
 .modal-card {
-    flex-direction: row;
-    width: 250px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+  flex-direction: row;
+  /* width: 240%; */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .modal-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.modalcard-image {
-    width: 41%;
-}
-
+/* .modalcard-image {
+  width: 41%;
+} */
 
 .modal-card-img {
-    width: 100%;
-    
+  width: 30%;
 }
 
- .modalcard-content {
-    width: 69%;
-    padding-left: 10px;
-    padding-top: 10px;
-} 
+.modalcard-content {
+  /* width: 69%; */
+  width: 220px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
 
 .modal-card-name {
-    color: #2e3434;
-    font-size: 14.4px;
-    text-align: left;
-    font-weight: bold;
-
+  color: #2e3434;
+  font-size: 14.4px;
+  text-align: left;
+  font-weight: bold;
 }
 
 .modal-card-price {
-    padding-bottom: 10px;
-    color: #2e3434;
-    margin-top: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    
-
-
+  color: #2e3434;
+  margin-top: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
-
