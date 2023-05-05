@@ -108,7 +108,7 @@ const Home = () => {
                           {obj.name}
                         </h4>
                       </div>
-                      <div style={{ display: "flex" }}>
+                      <div className="product-card-section" style={{ display: "flex" }}>
                         {products
                           .filter((product) => product.categoryId === obj.id)
                           .map((product) => (

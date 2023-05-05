@@ -89,3 +89,20 @@ margin: 10px;
     flex-direction: column;
     align-items: start;
 }
+
+.product-card-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+@media (max-width:360px) {
+  .cart-section{
+    display: none;
+  }
+  /* .product-category-section{
+    width: 120px;
+  } */
+  
+}
