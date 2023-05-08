@@ -9,7 +9,7 @@ const AddressSection = ({ title, address, phone, hours, minOrder }) => {
                 <h1 className="main-heading">{title}</h1>
             </div>
             <div style={{ display: "flex", alignItems: "start", flexWrap: "wrap" }}>
-                <div style={{ flex: 1, textAlign: "start", display: "flex", alignItems: "center", minWidth: "250px" }}>
+                <div style={{ flex: 1, textAlign: "start", display: "flex", alignItems: "start", minWidth: "250px" }}>
                     <FaMapMarkerAlt size={20} />
                     <span className="ps-2">{address}</span>
                 </div>

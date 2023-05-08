@@ -1,5 +1,5 @@
 .banner-top-section {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -23,6 +23,7 @@
     width: 40%;
     justify-content: space-between;
     padding: 0.5rem 2rem;
+    display: flex;
 }
 
 .login-menu-container {
@@ -33,7 +34,7 @@
 
 .login {
     color: white;
-    font-size:large;
+    font-size: large;
 }
 
 .menu-burger {
@@ -41,5 +42,10 @@
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    width:auto;
+    width: auto;
+}
+
+@media (max-width:360px) {
+    /* .outlet-information {
+            } */
 }

@@ -10,17 +10,13 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* .modalcard-image {
-  width: 41%;
-} */
-
 .modal-card-img {
   width: 30%;
 }
 
-.modalcard-content {
+.modal-card-content {
   /* width: 69%; */
-  width: 220px;
+  width: 235px;
   padding-left: 10px;
   padding-top: 10px;
 }

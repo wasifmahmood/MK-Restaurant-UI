@@ -9,7 +9,7 @@ export const ModalCard = ({ modalimg, modalname, modalprice, onClick }) => {
             </div> */}
       <img src={modalimg} alt={modalname} className="modal-card-img" />
 
-      <div className="modalcard-content">
+      <div className="modal-card-content">
         <div className="modal-card-name ">
           <span>{modalname}</span>
         </div>

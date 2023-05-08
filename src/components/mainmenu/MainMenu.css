@@ -75,12 +75,12 @@
 
 /* /navbar / */
 
-.nav-card {
+ .nav-card {
   padding: 5px;
   display: flex;
   border-radius: 5px;
   border-color: black;
-}
+} 
 
 .nav-name {
   color: red;
