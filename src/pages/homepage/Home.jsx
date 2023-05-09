@@ -3,14 +3,14 @@ import "./Home.css";
 import AddressSection from "../../components/addresssection/AddressSection";
 import HeroSlider from "../../components/heroslider/HeroSlider";
 import BannerTop from "../../components/bannertop/BannerTop";
-import { FaShoppingCart } from "react-icons/fa";
 import { CategoryButton, MainMenu, SrearhInput, } from "../../components/mainmenu/MainMenu";
 import ProductCard from "../../components/productcard/ProductCard";
 import { Category, products } from "../../components/productdata/DummyData";
 import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
 import { ProductDetailsModal } from "../../components/modals";
-import toggleDrawer from "../../components/drawer/Drawer";
+import list from "../../components/drawer/Drawer";
+import Drawer from "../../components/drawer/Drawer";
 
 
 
@@ -135,8 +135,8 @@ const Home = () => {
           </div> */}
         </div>
       </div>
-      <div className="shop-btn" >
-        <button className="btn btn-success " onClick={toggleDrawer}><FaShoppingCart /></button>
+      <div className="draw">
+        <Drawer />
       </div>
       <ProductDetailsModal
         open={open}

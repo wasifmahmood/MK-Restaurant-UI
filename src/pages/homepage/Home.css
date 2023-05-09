@@ -96,13 +96,14 @@ width: -webkit-fill-available; */
   flex-wrap: wrap;
 
 }
-
-.shop-btn {
-  /* background-color: green; */
+.draw{
   position: absolute;
-  right: 300px;
-  /* bottom: 0px; */
+  /* top: 0; */
+  right: 0;
+  width: 300px;
 }
+
+
 
 @media (max-width:360px) {
   .cart-section {
