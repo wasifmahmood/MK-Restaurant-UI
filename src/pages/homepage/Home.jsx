@@ -9,7 +9,6 @@ import { Category, products } from "../../components/productdata/DummyData";
 import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
 import { ProductDetailsModal } from "../../components/modals";
-import list from "../../components/drawer/Drawer";
 import Drawer from "../../components/drawer/Drawer";
 
 
@@ -43,6 +42,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+
       <div className="banner-top">
         <BannerTop />
       </div>
@@ -59,6 +59,7 @@ const Home = () => {
         />
       </div>
       <div>
+
         <div className="main-menu p4">
           <MainMenu onSearchBtnClick={toggleSearchBar}>
             {!searchBarVisible ? (
@@ -86,7 +87,9 @@ const Home = () => {
               />
             )}
           </MainMenu>
+
         </div>
+
         <div className="product-page">
           <div className="item-section scrollable-div">
             <div
@@ -110,8 +113,10 @@ const Home = () => {
                       <div className="product-card-section" style={{ display: "flex" }}>
                         {products
                           .filter((product) => product.categoryId === obj.id)
+
                           .map((product) => (
                             <ProductCard
+
                               key={product.id}
                               image={product.image}
                               title={product.title}
@@ -123,19 +128,24 @@ const Home = () => {
                             />
                             // <li key={product.id}>{product.title}</li>
                           ))}
+
+
                       </div>
+
                     </>
                   );
                 })}
+
               </div>
             </div>
           </div>
-          {/* <div className="cart-section">
+
+          <div className="cart-section">
             <CartSection />
-          </div> */}
+          </div>
         </div>
       </div>
-      <div className="draw">
+      <div className="draw ">
         <Drawer />
       </div>
       <ProductDetailsModal

@@ -46,6 +46,7 @@
 }
 
 @media (max-width:360px) {
-    /* .outlet-information {
-            } */
+    .outlet-information {
+        display: none;
+            }
 }

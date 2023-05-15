@@ -4,8 +4,8 @@ import Modal from "@mui/material/Modal";
 import { BsPlusCircle, BsDashCircle, BsXCircle } from "react-icons/bs";
 import { AddOns } from "./../../components/productdata/DummyData";
 import { ModalCard } from "./../modalcard/modalcard";
-
 import "./modal.css";
+import { FaShoppingCart } from "react-icons/fa";
 
 const modalWrapStyle = {
   bgcolor: "background.paper",
@@ -111,7 +111,7 @@ export const ProductDetailsModal = ({
               {/* <div className="buttenSetToBottom"> */}
               <div className="increment-decrement">
                 <BsDashCircle
-                  size={"1.5em"}
+                  size={"50px"}
                   // color="#fbbe36"
                   onClick={onDecrementClick}
                 />
@@ -121,13 +121,15 @@ export const ProductDetailsModal = ({
                 </div>
 
                 <BsPlusCircle
-                  size={"1.5em"}
+                  size={"50px"}
                   // color="#fbbe36"
                   onClick={onIncrementClick}
                 />
                 <div className="add-item" onClick={onAddToCartClick}>
-                  {"Add to Cart   "} {productprice}
+                 <div className="btntext"> {"Add to Cart   "} {productprice}</div>
+                  <div className="icon"><FaShoppingCart /></div>
                 </div>
+        
               </div>
               {/* </div> */}
             </div>

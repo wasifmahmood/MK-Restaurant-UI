@@ -18,12 +18,13 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 
 export const CartSection = () => {
+    
     return (
         <div className="m-2 p-3 shadow rounded card border-0">
             {/* <div className="card rounded p-3 cart-list border-0"> */}
             <h4 className="my-order border-bottom pb-3">My Order</h4>
             <div className="menu-cart-list">
-                <div className="item-detail-section border-bottom p-2 d-flex" style={{flexDirection:'column'}}>
+                <div className="item-detail-section border-bottom p-2 d-flex" style={{ flexDirection: 'column' }}>
                     <div className="item-detail">
                         <div className="item-quantity">1x </div>
                         <div className="item-data">
@@ -59,6 +60,7 @@ export const CartSection = () => {
                 </div>
             </div>
             {/* </div> */}
+            
         </div>
     );
 }
