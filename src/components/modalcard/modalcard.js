@@ -3,6 +3,7 @@ import "./modalcard.css";
 
 export const ModalCard = ({ modalimg, modalname, modalprice, onClick }) => {
   return (
+    // <div></div>
     <div className="modal-card d-flex" onClick={onClick}>
       {/* <div className='modalcard-image'>
                 <img src={modalimg} alt={modalname} className='modal-card-img' />
@@ -22,9 +23,6 @@ export const ModalCard = ({ modalimg, modalname, modalprice, onClick }) => {
               value=""
               id="flexCheckDefault"
             />
-            {/* <label class="form-check-label" for="flexCheckDefault">
-                            Add ON
-                        </label> */}
           </div>
         </div>
       </div>

@@ -167,7 +167,7 @@ const Deals = [
 const products = [
   {
     AddOn: [],
-    Price: "85",
+    Price: "120",
     Sizes: [[Object]],
     categoryId: "ab680cb8-9759-c531-9c28-0bf8529809f6",
     description: "",
@@ -333,7 +333,7 @@ const products = [
       SidesSnack: false,
       SoftDrinks: false,
     },
-    Price: "",
+    Price: "125",
     Sizes: [[Object], [Object], [Object]],
     categoryId: "f35829a8-e609-3b31-d3c8-d8f8e4482d58",
     description:
@@ -380,7 +380,7 @@ const products = [
       SidesSnack: false,
       SoftDrinks: false,
     },
-    Price: "",
+    Price: "100",
     Sizes: [[Object], [Object], [Object]],
     categoryId: "f35829a8-e609-3b31-d3c8-d8f8e4482d58",
     description:

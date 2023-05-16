@@ -61,27 +61,28 @@ export const ProductDetailsModal = ({
       }}
     >
       <Box className="modal-content" sx={{ ...modalWrapStyle }}>
-        <div className="modalwrap">
+        <div className="modalwrap d-flex">
           <div className="modal-left">
             <img src={productimg} alt={productname} className="modal-img" />
           </div>
 
           <div className="modal-right">
-            <button
-              // style={{ background: "#fff" }}
-              type="button"
-              className="modalClose btn-close "
-              aria-label="Close"
-              onClick={onClose}
-            ></button>
+            <div className="modalClose">
+              <button
+                // style={{ background: "#fff" }}
+                type="button"
+                className=" btn-close "
+                aria-label="Close"
+                onClick={onClose}
+              ></button>
+            </div>
             <div className="top-heading">
-              <h4>{productname}</h4>
+              <h4 >{productname}</h4>
               <h5>Rs: {productprice} /-</h5>
               <p>{productdescription}</p>
             </div>
             <div className="item-options">
               <h6>Add on</h6>
-
               <div className="option-required ">
                 <div className="card-data">
                   {AddOns.map((category) => {
@@ -102,37 +103,30 @@ export const ProductDetailsModal = ({
                   })}
                 </div>
               </div>
-
-              <div className="InstructionWrap">
-                <h6>Special Instruction</h6>
-
-                <textarea class="form-control " rows="2"></textarea>
-              </div>
-              {/* <div className="buttenSetToBottom"> */}
-              <div className="increment-decrement">
-                <BsDashCircle
-                  size={"50px"}
-                  // color="#fbbe36"
-                  onClick={onDecrementClick}
-                />
-
-                <div className="count">
-                  <span style={{ alignSelf: "center" }}>{count}</span>
-                </div>
-
-                <BsPlusCircle
-                  size={"50px"}
-                  // color="#fbbe36"
-                  onClick={onIncrementClick}
-                />
-                <div className="add-item" onClick={onAddToCartClick}>
-                 <div className="btntext"> {"Add to Cart   "} {productprice}</div>
-                  <div className="icon"><FaShoppingCart /></div>
-                </div>
-        
-              </div>
-              {/* </div> */}
             </div>
+            <div className="InstructionWrap">
+              <h6>Special Instruction</h6>
+              <textarea class="form-control " style={{ fontSize: 12, padding: 15 }} rows="2" placeholder="Add Special instructions"></textarea>
+            </div>
+            <div className="increment-decrement">
+              <BsDashCircle
+                size={"50px"}
+                onClick={onDecrementClick}
+              />
+              <div className="count">
+                <span style={{ alignSelf: "center" }}>{count}</span>
+              </div>
+              <BsPlusCircle
+                size={"50px"}
+                onClick={onIncrementClick}
+              />
+              <div className="add-item" onClick={onAddToCartClick}>
+                <div className="btntext"> {"Add to Cart"} - Rs {productprice}</div>
+                <div className="cart-icon"><FaShoppingCart /></div>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </Box>

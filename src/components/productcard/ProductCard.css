@@ -57,11 +57,11 @@
 
 @media (max-width:360px) {
     .product-card{
-        width: 100px;
+        width: 125px;
         margin: 0.5rem;
     }
     .product-image{
-     width: 100px;   
+     width: 125px;   
     }
     .product-title {
         font-size: 0.5rem;

@@ -2,31 +2,36 @@
   background-color: white;
   /* padding: 20px; */
   /* border-radius: 5px; */
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .modalClose {
   position: absolute;
   top: 8px;
-  right: 16px;
+  right: 10px;
   /* position: fixed;
   top: 80px;
-  right: 170px; */
-  font-size: 18px;
-  background-color: #fff;
+  right: 160px;
+  font-size: 18px; */
+
 }
 
-.modalwrap {
+/* .modalwrap {
   display: flex;
-  flex-direction: row;
-  background-color: #f9f9f9;
-}
+ 
+} */
 
 .modal-left {
   width: 50%;
 }
+
 .modal-right {
   width: 50%;
+  position: relative;
+  height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-img {
@@ -36,17 +41,18 @@
 }
 
 .top-heading {
-  padding: 20px;
+  padding: 15px;
 }
 
 .InstructionWrap {
-  padding: 10px 10px;
+  padding: 20px;
   background-color: #e7e9eb;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: #2e2e2e;
   font-family: Larsseit, sans-serif;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+
 /* .form-label {
   font-size: 16px;
   color: #2e2e2e;
@@ -56,11 +62,11 @@
   background-color: #f9f9f9;
 } */
 
-.buttenSetToBottom {
+/* .buttenSetToBottom {
   position: absolute;
   bottom: 0px;
   padding: 10px 20px;
-}
+} */
 
 .increment-decrement {
   /* width: 100%; */
@@ -102,18 +108,21 @@
   font-weight: 300;
   border: none;
 }
+
 .modalwrap ::-webkit-scrollbar {
   display: none;
 }
+
 @media (min-width: 761px) {
   .modal-right {
     overflow-y: auto;
     position: relative;
     flex-direction: column;
     display: flex;
-    height: 550px;
+    height: 650px;
   }
 }
+
 @media (max-width: 760px) {
   .modalwrap {
     flex-direction: column;
@@ -123,9 +132,11 @@
   .modal-left {
     width: 100%;
   }
+
   .modal-right {
     width: 100%;
   }
+
   .modal-img {
     height: "50vh";
     width: "100vw";
@@ -135,32 +146,73 @@
 
 .item-options {
   padding: 10px 20px;
-  /* background-color: #2e3434; */
 }
+
 .option-required {
-  padding: 10px;
   font-size: 14px;
-  line-height: 18px;
   color: #6e6e6e;
   display: flex;
 }
 
 .card-container {
-  width: 550px;
+  width: 500px;
   display: flex;
-  column-gap: 20px;
-  padding: 5px 10px;
+  column-gap: 10px;
+  padding: 10px 0 10px 0px;
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto; /* add horizontal scroll */
+  overflow-x: auto;
+  /* add horizontal scroll */
 }
 
- @media (max-width:361px) {
-  .btntext{
+@media (max-width:360px) {
+  .btntext {
     display: none;
   }
 }
+
 @media (min-width:360px) {
-  .icon{
+  .cart-icon {
     display: none;
   }
-} 
+}
+@media (min-width: 360px) {
+  .modal-right {
+    overflow-y: auto;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    height: 550px;
+  }
+}
+@media (max-width: 360px) {
+  .modalwrap {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .modal-left {
+    width: 100%;
+  }
+
+  .modal-right {
+    width: 100%;
+    /* padding: 5px; */
+  }
+
+  .modal-img {
+    height: "50vh";
+    width: "100vw";
+    object-fit: cover;
+  }
+}
+@media (max-width:360px) {
+  .card-container {
+    width:90%; /* Adjust the width to fit the full width of the screen */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center the cards horizontally */
+    overflow-x: initial; /* Disable horizontal scroll */
+    padding: 5px 0px 0px 5px;
+   
+  }
+}
+
