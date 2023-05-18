@@ -3,6 +3,8 @@ import Logo from "../../assets/images/logo.png"
 import '../bannertop/BannerTop.css'
 import { FaBars } from 'react-icons/fa';
 import { CiDeliveryTruck } from "react-icons/ci";
+import { Link } from "react-scroll";
+
 
 
 function BannerTop() {
@@ -14,12 +16,12 @@ function BannerTop() {
             <div className="outlet-information" style={{ display: 'flex', alignItems: 'center' }}>
                 <div className="outlet-information__outlet">
                     <div><span>Outlet</span></div>
-                    <div><span style={{ color: '#CA2129' }}>Marks Kitchen - Gulberg</span></div>
+                    <div><span style={{ color: '#CA2129' }} >Marks Kitchen - Gulberg</span></div>
                 </div>
                 <div className="outlet-information__order">
                     <div><span>Order for</span></div>
                     <div >
-                        <div style={{ color: '#CA2129' }}> <CiDeliveryTruck /> Delivery</div>
+                        <div style={{ color: '#CA2129' }}> <CiDeliveryTruck />Delivery</div>
                     </div>
                 </div>
                 <div className="outlet-information__serving-time">

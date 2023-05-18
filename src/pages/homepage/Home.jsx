@@ -10,6 +10,8 @@ import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
 import { ProductDetailsModal } from "../../components/modals";
 import Drawer from "../../components/drawer/Drawer";
+import { TopbannerDetailsModal } from "../../components/Topmodal/Topmodal";
+
 
 
 
@@ -18,6 +20,8 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
   const [productdetail, setproductdetail] = useState("");
   const [open, setOpen] = useState(false);
+  const [topopen, settopOpen] = useState(false);
+
 
   const toggleSearchBar = () => {
     setSearchBarVisible(!searchBarVisible);
@@ -42,9 +46,14 @@ const Home = () => {
 
   return (
     <React.Fragment>
-
       <div className="banner-top">
         <BannerTop />
+      </div>
+      <div>
+        <TopbannerDetailsModal
+        topopen={topopen}
+        onClose={() => settopOpen(false)}
+        />
       </div>
       <div className="hero-slider">
         <HeroSlider />

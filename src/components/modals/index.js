@@ -34,7 +34,7 @@ export const ProductDetailsModal = ({
   const increment = () => {
     setCount((prevCount) => (prevCount += 1));
     setCount(function (prevCount) {
-      return (prevCount += 1);
+      return (prevCount += 0);
     });
   };
 
@@ -76,7 +76,7 @@ export const ProductDetailsModal = ({
                 onClick={onClose}
               ></button>
             </div>
-             <div className="top-heading">
+            {/* <div className="top-heading">
               <h4 >{productname}</h4>
               <h5>Rs: {productprice} /-</h5>
               <p>{productdescription}</p>
@@ -107,14 +107,14 @@ export const ProductDetailsModal = ({
              <div className="InstructionWrap">
               <h6>Special Instruction</h6>
               <textarea class="form-control " style={{ fontSize: 12, padding: 15 }} rows="2" placeholder="Add Special instructions"></textarea>
-            </div>
+            </div> */}
             <div className="increment-decrement">
               <BsDashCircle
                 size={"50px"}
                 onClick={onDecrementClick}
               />
               <div className="count">
-                <span style={{ alignSelf: "center" }}>{count}</span>
+                <span style={{ alignSelf: "center" }}>{count + 1}</span>
               </div>
               <BsPlusCircle
                 size={"50px"}
@@ -130,6 +130,8 @@ export const ProductDetailsModal = ({
           </div>
         </div>
       </Box>
+
+
     </Modal>
   );
 };
