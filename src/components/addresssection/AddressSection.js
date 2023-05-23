@@ -13,15 +13,15 @@ const AddressSection = ({ title, address, phone, hours, minOrder }) => {
                     <FaMapMarkerAlt size={20} />
                     <span className="ps-2">{address}</span>
                 </div>
-                <div style={{ flex: 1, textAlign: "center", minWidth: "250px" }}>
+                <div style={{ flex: 1, textAlign: "start", minWidth: "250px" }}>
                     <FaPhoneAlt size={18} />
                     <span className="ps-2">{phone}</span>
                 </div>
-                <div style={{ flex: 1, textAlign: "center", minWidth: "250px" }}>
+                <div style={{ flex: 1, textAlign: "start", minWidth: "250px" }}>
                     <FaClock size={18} />
                     <span className="ps-2">{hours}</span>
                 </div>
-                <div style={{ flex: 1, textAlign: "center", minWidth: "250px" }}>
+                <div style={{ flex: 1, textAlign: "start", minWidth: "250px" }}>
                     <FaCreditCard size={18} />
                     <span className="ps-2">{minOrder}</span>
                 </div>
