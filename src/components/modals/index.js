@@ -26,27 +26,22 @@ export const ProductDetailsModal = ({
   productprice,
   productimg,
   productdescription,
-  onDecrementClick,
-  onIncrementClick,
+  // onDecrementClick,
+  // onIncrementClick,
   onAddToCartClick,
 }) => {
   const [count, setCount] = useState(0);
   const increment = () => {
-    setCount((prevCount) => (prevCount += 1));
-    setCount(function (prevCount) {
-      return (prevCount += 0);
-    });
+    setCount((prevCount) => (prevCount + 1));
   };
 
   const decrement = () => {
-    setCount(function (prevCount) {
-      if (prevCount > 0) {
-        return (prevCount -= 1);
-      } else {
-        return (prevCount = 0);
-      }
-    });
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+    }
   };
+  const totalPrice = (productprice * (count + 1)).toFixed(2);
+  
 
   return (
     <Modal
@@ -76,14 +71,14 @@ export const ProductDetailsModal = ({
                 onClick={onClose}
               ></button>
             </div>
-            {/* <div className="top-heading">
+            <div className="top-heading">
               <h4 >{productname}</h4>
               <h5>Rs: {productprice} /-</h5>
               <p>{productdescription}</p>
             </div>
             <div className="item-options">
               <h6>Add on</h6>
-              <div className="option-required " style={{fontSize:14}}>
+              <div className="option-required " style={{ fontSize: 14 }}>
                 <div className="card-data">
                   {AddOns.map((category) => {
                     return (
@@ -103,25 +98,25 @@ export const ProductDetailsModal = ({
                   })}
                 </div>
               </div>
-            </div>  
-             <div className="InstructionWrap">
+            </div>
+            <div className="InstructionWrap">
               <h6>Special Instruction</h6>
               <textarea class="form-control " style={{ fontSize: 12, padding: 15 }} rows="2" placeholder="Add Special instructions"></textarea>
-            </div> */}
+            </div>
             <div className="increment-decrement">
               <BsDashCircle
                 size={"50px"}
-                onClick={onDecrementClick}
+                onClick={decrement}
               />
               <div className="count">
                 <span style={{ alignSelf: "center" }}>{count + 1}</span>
               </div>
               <BsPlusCircle
                 size={"50px"}
-                onClick={onIncrementClick}
+                onClick={increment}
               />
               <div className="add-item" onClick={onAddToCartClick}>
-                <div className="btntext"> {"Add to Cart"} - Rs {productprice}</div>
+                <div className="btntext"> {"Add to Cart"} - Rs {totalPrice}</div>
                 <div className="cart-icon"><FaShoppingCart /></div>
               </div>
             </div>

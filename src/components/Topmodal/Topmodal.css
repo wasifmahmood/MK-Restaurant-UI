@@ -1,0 +1,48 @@
+.modal-contant,
+.location,
+.Select-Outlet
+ {
+    justify-content: space-between;
+    padding: 20px 30px 0px 20px !important;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-family: Larsseit, sans-serif;
+
+
+}
+
+.order-option {
+    padding: 40px 20px 25px 30px !important;
+    background-color: aqua;
+    column-gap: 20px;
+}
+
+.delivery,
+.pickup {
+    background-color: #CA2129;
+    border-radius: 30px;
+    padding: 10px 20px 10px 10px;
+    width: 20%;
+}
+
+
+.log    
+ {
+    padding: 20px 0px 0px 30px;
+
+}
+.address{
+    margin: 20px;
+    padding: 10px 10px 5px 20px; 
+    border-style: groove;
+    border-radius: 10px;
+    border-color: white;
+}
+
+.address-complete{
+    padding-left: 25px;
+    justify-content: space-between;
+    
+}
