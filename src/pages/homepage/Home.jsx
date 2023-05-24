@@ -9,10 +9,8 @@ import { Category, products } from "../../components/productdata/DummyData";
 import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
 import { ProductDetailsModal } from "../../components/modals";
+import { TopOutletinformation } from '../../components/Outletinformation/Outletinformation';
 import Drawer from "../../components/drawer/Drawer";
-
-
-
 
 
 const Home = () => {
@@ -20,7 +18,7 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
   const [productdetail, setproductdetail] = useState("");
   const [open, setOpen] = useState(false);
- 
+
 
 
   const toggleSearchBar = () => {
@@ -49,11 +47,12 @@ const Home = () => {
       <div className="banner-top">
         <BannerTop />
       </div>
-      <div>
-        
-      </div>
+
       <div className="hero-slider">
         <HeroSlider />
+      </div>
+      <div className="outlet-information-mobile">
+        <TopOutletinformation />
       </div>
       <div>
         <AddressSection

@@ -1,0 +1,22 @@
+
+@media (max-width: 360px) {
+    .modalWrapStyle{
+        max-Width: "100%";
+        max-Height: "100%";
+        align-content: center;
+        border-radius: none;
+    }
+    .modal-box {
+        padding-right: 20px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .order-option {
+        column-gap: 8px;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+    }
+}

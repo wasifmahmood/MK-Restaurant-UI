@@ -99,22 +99,21 @@ width: -webkit-fill-available; */
 
 .draw {
   position: absolute;
-padding-left: 180px;
-padding-bottom: 5px;
-padding-top: 5px;
-/* justify-content: center;
+  padding-left: 180px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  /* justify-content: center;
  align-items: center;
  flex-direction: row; */
-  
+
 }
+
 
 
 @media (min-width:360px) {
   .btn-cart {
     display: none;
   }
-
-
 }
 
 @media (max-width:360px) {
@@ -123,9 +122,11 @@ padding-top: 5px;
   }
 
 }
-/* @media (max-width:360px) {
-  .banner-top{
+
+@media (min-width:360px) {
+  .outlet-information-mobile,.ignor {
     display: none;
   }
-  
-} */
+
+
+}

@@ -1,0 +1,11 @@
+.outlet-information {
+    box-sizing: content-box;
+    background-color: white;
+    border-radius: 100px;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    display: flex;
+}

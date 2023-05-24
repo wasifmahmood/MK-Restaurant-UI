@@ -14,7 +14,7 @@
     border-radius: 20px;
 }
 
-.outlet-information {
+/* .outlet-information-desktop {
     box-sizing: content-box;
     background-color: white;
     border-radius: 100px;
@@ -24,7 +24,7 @@
     justify-content: space-between;
     padding: 0.5rem 2rem;
     display: flex;
-}
+} */
 
 .login-menu-container {
     width: 10%;
@@ -43,4 +43,10 @@
     padding: 10px;
     border-radius: 5px;
     width: auto;
+}
+@media (max-width:360px) {
+    .outlet-information-desktop,.truck,.show{
+        display: none;
+    }
+    
 }
