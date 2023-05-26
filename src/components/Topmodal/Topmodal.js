@@ -8,6 +8,10 @@ import { Link } from "react-scroll";
 import { FaRegAddressBook } from "react-icons/fa";
 import { FcCheckmark } from "react-icons/fc";
 import { GrAdd } from "react-icons/gr";
+import { TextField } from "@mui/material";
+import { makeStyles } from "@material-ui/core/styles";
+import { red } from "@mui/material/colors";
+
 // import { NewAddress } from '../Newaddress';
 
 const modalWrapStyle = {
@@ -19,15 +23,36 @@ const modalWrapStyle = {
   overflow: "hidden",
   borderstyle: "none",
 };
+const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: "20px",
+  },
+  textField: {
+    marginBottom: "20px",
+  },
+  submitButton: {
+    marginTop: "20px",
+  },
+}));
 
 export const TopbannerDetailsModal = ({ open, onClose }) => {
+  const classes = useStyles();
+
   const [flag, setflag] = useState(true);
   const [addAddressEdit, setaddAddressEdit] = useState(false);
   const [addNewAddress, setaddNewAddress] = useState(false);
+
+  const resetOnClose = () => {
+    onClose();
+    setaddAddressEdit(false);
+    setaddNewAddress(false);
+    setflag(true);
+  };
+
   return (
     <Modal
       open={open}
-      onClose={onClose}
+      onClose={resetOnClose}
       sx={{
         display: "flex",
         alignItems: "center",
@@ -46,7 +71,13 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
             >
               Order Preferences
             </h5>
-            <div onClick={onClose}>Skip</div>
+            <div
+              onClick={() => {
+                resetOnClose();
+              }}
+            >
+              Skip
+            </div>
           </div>
           <div
             className="order-option d-flex pt-4 pr-5 pl-4 pb-2 "
@@ -70,7 +101,14 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
               <div style={{ marginRight: "5px" }}>
                 <HiShoppingBag size={"20px"} />
               </div>
-              <div style={{ fontSize: 12 }} onClick={() => setflag(false)}>
+              <div
+                style={{ fontSize: 12 }}
+                onClick={() => {
+                  setaddAddressEdit(false);
+                  setaddNewAddress(false);
+                  setflag(false);
+                }}
+              >
                 PICK UP
               </div>
             </div>
@@ -82,10 +120,10 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
               </div>
               <div
                 onClick={() => {
-                  setaddAddressEdit(true);
                   !addAddressEdit
                     ? setaddAddressEdit(true)
                     : setaddAddressEdit(false);
+                  setaddNewAddress(false);
                 }}
               >
                 {!addAddressEdit ? "Edit" : "Back"}
@@ -107,7 +145,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                 <div>Change</div>
               </div>
               <div className="address d-flex justify-content-between p-3  border rounded m-1 mt-4 bg-danger">
-                <div className="address-complete ">
+                <div className="address-complete " style={{ color: "white" }}>
                   <div style={{ columnGap: 10 }}>
                     <FaRegAddressBook style={{ marginRight: 10 }} />
                     Marks Kitchen - Gulberg
@@ -126,7 +164,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
               {flag ? (
                 <>
                   <div className="pickup-detail d-flex justify-content-between bg-danger  position-relative z-index-200  justify-content-between p-3  border rounded m-1 mt-4">
-                    <div>
+                    <div style={{ color: "white" }}>
                       <HiClock style={{ marginRight: 8 }} />
                       Delivery Immediatly
                       <div className="ps-4">Out of working hours</div>
@@ -139,7 +177,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                 </>
               ) : (
                 <div className="pickup-detail  d-flex justify-content-between p-4 position-relative z-index-200  bg-danger border rounded mt-4">
-                  <div>
+                  <div style={{ color: "white" }}>
                     <HiClock style={{ marginRight: 8 }} />
                     Pickup Immediatly
                     <div className="ps-4">Out of working hours</div>
@@ -159,33 +197,102 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   setaddNewAddress(true);
                 }}
               >
-                <GrAdd size={"30px"} /> Add New Location
+                <GrAdd size={"30px"} /> Add New Address
               </button>
             </div>
           )}
-          {addNewAddress ? (
+          {addNewAddress && addAddressEdit ? (
             <>
-            <div className="justify-content-between pt-4">
-              <label>
-                Select City: <input name="City" />
-              </label>
-              <label  className="pt-4">
-                Select Area: <input name="Area" />
-              </label>
-              <div className="pt-4 text-center">
-                <button className="btn btn-success ">Save</button>
+              <div className="justify-content-between pt-4 scroll">
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Select Your City"
+                  name="Add City"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  type={"text"}
+
+                  // required
+                />
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Select Area"
+                  name="Select Area"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  type={"text"}
+
+                  // required
+                />
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Street address"
+                  name="Street"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  type={"text"}
+
+                  // required
+                />
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Phone  Number"
+                  name="Number"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  type={"number"}
+                  required
+                />
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Address lable"
+                  name="lable"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  // required
+                />
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  // disabled={!editable}
+                  label="Address Instructions"
+                  name="Instructions"
+                  // value={city}
+                  // onChange={handleAddChange}
+                  variant="outlined"
+                  // required
+                />
+                <div className="pt-4 text-center">
+                  <button className="btn btn-success ">Save Address</button>
                 </div>
               </div>
             </>
           ) : null}
-          <div
-            className="footer row  pt-4 px-5 "
-            style={{ alignItems: "center" }}
-          >
-            <button type="button" className="btn btn-danger">
-              Done
-            </button>
-          </div>
+          {!addAddressEdit ? (
+            <div
+              className="footer row  pt-4 px-5 "
+              style={{ alignItems: "center" }}
+            >
+              <button type="button" className="btn btn-danger">
+                Done
+              </button>
+            </div>
+          ) : null}
         </div>
       </Box>
     </Modal>
