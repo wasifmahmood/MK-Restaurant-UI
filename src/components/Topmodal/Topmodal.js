@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px",
   },
   textField: {
-    marginBottom: "20px",
+    marginBottom: "100px",
   },
   submitButton: {
     marginTop: "20px",
@@ -115,7 +115,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
           </div>
           {flag ? (
             <div className="location d-flex justify-content-between pt-4 pr-5 pl-4">
-              <div className="fw-bold" onClick={() => {}}>
+              <div className="fw-bold" onClick={() => { }}>
                 {!addAddressEdit ? "Selected Location" : "Saved Location"}
               </div>
               <div
@@ -203,19 +203,18 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
           )}
           {addNewAddress && addAddressEdit ? (
             <>
-              <div className="justify-content-between pt-4 scroll">
+              <div className="justify-content-between pt-4 scroll mb-4">
                 <TextField
                   className={classes.textField}
                   fullWidth
                   // disabled={!editable}
                   label="Select Your City"
-                  name="Add City"
+                  name="Lahore"
                   // value={city}
                   // onChange={handleAddChange}
                   variant="outlined"
                   type={"text"}
-
-                  // required
+                  required
                 />
                 <TextField
                   className={classes.textField}
@@ -227,8 +226,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // onChange={handleAddChange}
                   variant="outlined"
                   type={"text"}
-
-                  // required
+                  required
                 />
                 <TextField
                   className={classes.textField}
@@ -240,8 +238,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // onChange={handleAddChange}
                   variant="outlined"
                   type={"text"}
-
-                  // required
+                   required
                 />
                 <TextField
                   className={classes.textField}
@@ -253,6 +250,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // onChange={handleAddChange}
                   variant="outlined"
                   type={"number"}
+                  maxLength={12}
                   required
                 />
                 <TextField
@@ -264,7 +262,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // value={city}
                   // onChange={handleAddChange}
                   variant="outlined"
-                  // required
+                // required
                 />
                 <TextField
                   className={classes.textField}
@@ -275,7 +273,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // value={city}
                   // onChange={handleAddChange}
                   variant="outlined"
-                  // required
+                // required
                 />
                 <div className="pt-4 text-center">
                   <button className="btn btn-success ">Save Address</button>
