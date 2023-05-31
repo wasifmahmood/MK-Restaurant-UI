@@ -10,7 +10,7 @@ import { FcCheckmark } from "react-icons/fc";
 import { GrAdd } from "react-icons/gr";
 import { TextField } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@mui/material/colors";
+
 
 // import { NewAddress } from '../Newaddress';
 
@@ -23,12 +23,15 @@ const modalWrapStyle = {
   overflow: "hidden",
   borderstyle: "none",
 };
+const alerts = () => {
+  alert("Plugd needs your device location for delivery orders. Please enable your GPS!");
+};
 const useStyles = makeStyles((theme) => ({
   container: {
     padding: "20px",
   },
   textField: {
-    marginBottom: "100px",
+    marginBottom: "15px",
   },
   submitButton: {
     marginTop: "20px",
@@ -190,14 +193,15 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
               )}
             </>
           ) : (
-            <div className="add-location pt-2">
+            <div className="add-location pt-2" style={{ color: "white" }}>
               <button
                 className="btn btn-danger"
                 onClick={() => {
-                  setaddNewAddress(true);
+                  setaddNewAddress(true)
+                  alerts();
                 }}
               >
-                <GrAdd size={"30px"} /> Add New Address
+                <GrAdd style={{ color: "white" }} size={"15px"}  /> Add New Addres
               </button>
             </div>
           )}
@@ -238,7 +242,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                   // onChange={handleAddChange}
                   variant="outlined"
                   type={"text"}
-                   required
+                  required
                 />
                 <TextField
                   className={classes.textField}
