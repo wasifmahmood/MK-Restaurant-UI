@@ -4,6 +4,7 @@ import '../bannertop/BannerTop.css'
 import { FaBars } from 'react-icons/fa';
 import { TopOutletinformation } from '../../components/Outletinformation/Outletinformation';
 import Drawer from '../drawer/Drawer'
+import { Link } from "react-scroll";
 
 function BannerTop() {
     return (
@@ -17,7 +18,7 @@ function BannerTop() {
                 </div>
                 <div>
                     <div className="login-menu-container" style={{ display: 'flex', alignItems: 'center', padding: "1rem" }}>
-                        {/* <div><span className="login"><Link to='/'>Login</Link></span></div> */}
+                        <div><span className="login"><Link to='/'>Login</Link></span></div>
                         <div className="menu-burger" onClick={<Drawer />}><FaBars /></div>
                     </div>
                 </div>

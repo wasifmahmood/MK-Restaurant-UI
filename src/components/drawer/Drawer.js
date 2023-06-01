@@ -11,7 +11,6 @@ export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     right: false,
   });
-
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -19,7 +18,6 @@ export default function TemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
-
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}

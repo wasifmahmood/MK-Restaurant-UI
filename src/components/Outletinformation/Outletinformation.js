@@ -34,6 +34,7 @@ export const TopOutletinformation = () => {
         return date.toLocaleString('en-US', options);
     };
     return (
+        // style={{ color: '#CA2129', fontSize: 14, border: 'none', backgroundColor: 'white' }}
         <div>
             <div className="outlet-information" style={{ display: 'flex', alignItems: 'center' }}>
                 <div className="outlet-information__outlet" onClick={handleOutletClick}>
@@ -47,6 +48,7 @@ export const TopOutletinformation = () => {
                     <div className="d-flex" style={{ color: '#CA2129', alignItems: 'center' }}>
                         <div className="truck" style={{ marginRight: "10px", }}><CiDeliveryTruck size={'25px'} /></div>
                         <div style={{ color: '#CA2129', fontSize: 14 }}> Delivery</div>
+
                     </div>
                 </div>
                 <div className="outlet-information__serving-time" onClick={handleOutletClick}>
