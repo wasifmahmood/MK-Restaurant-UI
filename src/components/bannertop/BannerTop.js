@@ -1,12 +1,15 @@
-import React from "react";
-import Logo from "../../assets/images/logo.png"
-import '../bannertop/BannerTop.css'
+import React, { useState } from "react";
+import Logo from "../../assets/images/logo.png";
+import '../bannertop/BannerTop.css';
 import { FaBars } from 'react-icons/fa';
 import { TopOutletinformation } from '../../components/Outletinformation/Outletinformation';
-import Drawer from '../drawer/Drawer'
-import { Link } from "react-scroll";
+import Login from "../Login/Login";
 
 function BannerTop() {
+    const [open, setOpen] = useState(false);
+    const handleClick = () => {
+        setOpen(true);
+    }
     return (
         <div>
             <div className="banner-top-section p-4" style={{ display: 'flex', alignItems: 'center' }}>
@@ -18,10 +21,19 @@ function BannerTop() {
                 </div>
                 <div>
                     <div className="login-menu-container" style={{ display: 'flex', alignItems: 'center', padding: "1rem" }}>
-                        <div><span className="login"><Link to='/'>Login</Link></span></div>
-                        <div className="menu-burger" onClick={<Drawer />}><FaBars /></div>
+                        <div><span className="login" 
+                        onClick={handleClick}
+                        >
+                            Login</span></div>
+                        <div className="menu-burger" ><FaBars /></div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <Login
+                    open={open}
+                    onClose={() => setOpen(false)}
+                />
             </div>
         </div>
     );

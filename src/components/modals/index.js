@@ -29,9 +29,10 @@ export const ProductDetailsModal = ({
   // onDecrementClick,
   // onIncrementClick,
   onAddToCartClick,
-}) => {
+}) => 
+{
   const [count, setCount] = useState(0);
-  
+
   const increment = () => {
     setCount((prevCount) => (prevCount + 1));
   };
@@ -60,7 +61,6 @@ export const ProductDetailsModal = ({
           <div className="modal-left">
             <img src={productimg} alt={productname} className="modal-img" />
           </div>
-
           <div className="modal-right">
             <div className="modalClose">
               <button
@@ -120,13 +120,9 @@ export const ProductDetailsModal = ({
                 <div className="cart-icon"><FaShoppingCart /></div>
               </div>
             </div>
-
-
           </div>
         </div>
       </Box>
-
-
     </Modal>
   );
 };

@@ -12,7 +12,6 @@ import { TextField } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 
 
-// import { NewAddress } from '../Newaddress';
 
 const modalWrapStyle = {
   bgcolor: "background.paper",
@@ -40,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const TopbannerDetailsModal = ({ open, onClose }) => {
   const classes = useStyles();
-
   const [flag, setflag] = useState(true);
   const [addAddressEdit, setaddAddressEdit] = useState(false);
   const [addNewAddress, setaddNewAddress] = useState(false);
