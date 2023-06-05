@@ -72,9 +72,9 @@ export const ProductDetailsModal = ({
               ></button>
             </div>
             <div className="top-heading">
-              {/* <h4 >{productname}</h4>
+              <h4 >{productname}</h4>
               <h5>Rs: {productprice} /-</h5>
-              <p>{productdescription}</p> */}
+              <p>{productdescription}</p>
             </div>
             <div className="item-options">
               <h6>Add on</h6>
@@ -99,10 +99,10 @@ export const ProductDetailsModal = ({
                 </div>
               </div>
             </div>
-            {/* <div className="InstructionWrap">
+            <div className="InstructionWrap">
               <h6>Special Instruction</h6>
               <textarea class="form-control " style={{ fontSize: 12, padding: 15 }} rows="2" placeholder="Add Special instructions"></textarea>
-            </div> */}
+            </div>
             <div className="increment-decrement">
               <BsDashCircle
                 size={"50px"}

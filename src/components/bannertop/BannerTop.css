@@ -47,6 +47,7 @@
 @media (max-width:360px) {
     .outlet-information-desktop,.truck,.show{
         display: none;
+        flex-wrap: wrap;
     }
     
 }

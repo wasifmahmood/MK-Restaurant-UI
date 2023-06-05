@@ -4,6 +4,7 @@ import '../bannertop/BannerTop.css';
 import { FaBars } from 'react-icons/fa';
 import { TopOutletinformation } from '../../components/Outletinformation/Outletinformation';
 import Login from "../Login/Login";
+import { Link } from "react-scroll";
 
 function BannerTop() {
     const [open, setOpen] = useState(false);
@@ -21,10 +22,10 @@ function BannerTop() {
                 </div>
                 <div>
                     <div className="login-menu-container" style={{ display: 'flex', alignItems: 'center', padding: "1rem" }}>
-                        <div><span className="login" 
+                        <div><Link className="login" 
                         onClick={handleClick}
                         >
-                            Login</span></div>
+                            Login</Link></div>
                         <div className="menu-burger" ><FaBars /></div>
                     </div>
                 </div>

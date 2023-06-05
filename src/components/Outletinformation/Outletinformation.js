@@ -36,25 +36,52 @@ export const TopOutletinformation = () => {
     return (
         // style={{ color: '#CA2129', fontSize: 14, border: 'none', backgroundColor: 'white' }}
         <div>
-            <div className="outlet-information" style={{ display: 'flex', alignItems: 'center' }}>
-                <div className="outlet-information__outlet" onClick={handleOutletClick}>
-                    <div><span>Outlet</span></div>
-                    <div style={{ color: '#CA2129', fontSize: 14 }}>
-                        Marks Kitchen - Gulberg
+            <div className="outlet-information" style={{ display: 'flex', alignItems: 'center', fontSize: 13 }}onClick={handleOutletClick}>
+                <div className="outlet-information__outlet" >
+                    <div >
+                        <button style={{ border: 'none', backgroundColor: 'white' }}>
+                            Outlet
+                        </button>
                     </div>
+                    <div className="address">
+                        <button style={{ color: '#CA2129', border: 'none', backgroundColor: 'white' }}>
+                            Marks Kitchen - Gulberg
+                        </button>
+                    </div>
+
                 </div>
-                <div className="outlet-information__order" onClick={handleOutletClick}>
-                    <div><span>Order for</span></div>
+                <div className="outlet-information__order" >
+                    <div>
+                        <button style={{ border: 'none', backgroundColor: 'white' }}>Order for</button>
+                    </div>
                     <div className="d-flex" style={{ color: '#CA2129', alignItems: 'center' }}>
-                        <div className="truck" style={{ marginRight: "10px", }}><CiDeliveryTruck size={'25px'} /></div>
-                        <div style={{ color: '#CA2129', fontSize: 14 }}> Delivery</div>
+                        <div className="truck" style={{ marginRight: "10px", }}>
+                            <CiDeliveryTruck size={'20px'} />
+                        </div>
+                        <div style={{ fontSize: 13 }}>
+                            <button style={{ color: '#CA2129', border: 'none', backgroundColor: 'white' }}>
+                                Delivery
+                            </button>
+                        </div>
 
                     </div>
                 </div>
-                <div className="outlet-information__serving-time" onClick={handleOutletClick}>
-                    <div><span>Serving time</span></div>
-                    <div className="show" ><span style={{ color: '#CA2129', fontSize: 14 }}>{dateTime} 12:00PM</span></div>
-                    <div className="ignor"><span style={{ color: '#CA2129', fontSize: 14 }}>ASAP</span></div>
+                <div className="outlet-information__serving-time" >
+                    <div>
+                        <button style={{ border: 'none', backgroundColor: 'white', alignItems: 'center' }}>
+                            Serving time
+                        </button>
+                    </div>
+                    <div className="show" >
+                        <button style={{ color: '#CA2129', fontSize: 12, border: 'none', backgroundColor: 'white' }}>
+                            {dateTime} 12:30PM
+                        </button>
+                    </div>
+                    <div className="ignor">
+                        <button style={{ color: '#CA2129', fontSize: 12, border: 'none', backgroundColor: 'white' }}>
+                            ASAP
+                        </button>
+                    </div>
                 </div>
             </div>
             <div>
