@@ -3,7 +3,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import signup from '../../assets/images/signup.svg';
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import flag from '../../assets/images/flag.png'
 import { TbFlag2Filled } from 'react-icons/tb';
 
 const modalWrapStyle = {

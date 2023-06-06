@@ -15,9 +15,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const modalWrapStyle = {
   bgcolor: "background.paper",
-  boxShadow: 30,
-  // maxWidth: "45vw",
-  // maxHeight: "90vh",
+  boxShadow: 40,
+  maxWidth: "40vw",
+  maxHeight: "50vw",
   borderRadius: 4,
   overflow: "hidden",
   borderstyle: "none",
@@ -152,7 +152,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                     Marks Kitchen - Gulberg
                   </div>
                   <div className="ps-4">
-                    AL-Hafeez View, Block D1, Gulberg 3, Lahore. Pakistan
+                    AL-Hafeez View, Block D1, Gulberg 3, Lahore
                   </div>
                 </div>
                 <div className="checkmark ">
@@ -164,7 +164,7 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
               </div>
               {flag ? (
                 <>
-                  <div className="pickup-detail d-flex justify-content-between bg-danger  position-relative z-index-200  justify-content-between p-3  border rounded m-1 mt-4">
+                  {/* <div className="pickup-detail d-flex justify-content-between bg-danger  position-relative z-index-200  justify-content-between p-3  border rounded m-1 mt-4">
                     <div style={{ color: "white" }}>
                       <HiClock style={{ marginRight: 8 }} />
                       Delivery Immediatly
@@ -174,10 +174,10 @@ export const TopbannerDetailsModal = ({ open, onClose }) => {
                     <div className="checkmark ">
                       <FcCheckmark />
                     </div>
-                  </div>
+                  </div> */}
                 </>
               ) : (
-                <div className="pickup-detail  d-flex justify-content-between p-4 position-relative z-index-200  bg-danger border rounded mt-4">
+                <div className="pickup-detail  d-flex justify-content-between p-2 position-relative z-index-200  bg-danger border rounded mt-3">
                   <div style={{ color: "white" }}>
                     <HiClock style={{ marginRight: 8 }} />
                     Pickup Immediatly
