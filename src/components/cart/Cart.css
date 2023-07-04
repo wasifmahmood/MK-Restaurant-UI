@@ -39,6 +39,8 @@ border: none;
 border-radius: 5px;
 height:35px;
 color: white;
+text-decoration: none;
+text-align: center;
 }
 
 .checkout-button:hover {

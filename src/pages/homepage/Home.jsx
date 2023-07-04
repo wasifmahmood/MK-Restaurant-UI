@@ -8,6 +8,7 @@ import ProductCard from "../../components/productcard/ProductCard";
 import { Category, products } from "../../components/productdata/DummyData";
 import { COLORS } from "../../constants/colors";
 import { CartSection } from "../../components/cart/Cart";
+import { BrowserRouter} from "react-router-dom";
 import { ProductDetailsModal } from "../../components/modals";
 import { TopOutletinformation } from '../../components/Outletinformation/Outletinformation';
 import Drawer from "../../components/drawer/Drawer";
@@ -145,7 +146,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="cart-section">
+          <div className="cart-section">.
             <CartSection />
           </div>
         </div>

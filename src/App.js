@@ -1,12 +1,21 @@
 import React from "react";
 import "./App.css";
 import Home from "./pages/homepage/Home";
+import { Checkout } from "./pages/homepage/checkout";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Home />
+      <Checkout /> */}
     </div>
   );
 };

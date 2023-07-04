@@ -71,11 +71,11 @@ export const ProductDetailsModal = ({
                 onClick={onClose}
               ></button>
             </div>
-            <div className="top-heading">
+            {/* <div className="top-heading">
               <h4 >{productname}</h4>
               <h5>Rs: {productprice} /-</h5>
               <p>{productdescription}</p>
-            </div>
+            </div> */}
             <div className="item-options">
               <h6>Add on</h6>
               <div className="option-required " style={{ fontSize: 14 }}>
